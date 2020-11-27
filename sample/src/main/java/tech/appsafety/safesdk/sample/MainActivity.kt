@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import tech.appsafety.safesdk.SafeSdkInterface
+import tech.appsafety.safesdk.SafeSdkManager
+import tech.appsafety.shared.Detection
+import tech.appsafety.shared.DetectionObserver
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,9 +22,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var emptyText: TextView
     private lateinit var progressBar: ProgressBar
     private val adapter = CustomAdapter()
+    private lateinit var safe: SafeSdkInterface
 
     companion object {
         private const val MY_PERMISSIONS_REQUEST_LOCATION = 100
+        private const val mockSign = "b4JTGzI0sY1nCWXEOsDTWN6NrEA="
+        private val defaultStore = listOf("com.android.vending")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +40,29 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         progressBar = findViewById(R.id.progress_bar)
         progressBar.visibility = View.VISIBLE
+        initSafeSdk()
+    }
+
+    private fun initSafeSdk() {
+        safe = SafeSdkManager
+        //trigger once and wait for data
+        safe.detectAll(::data)
+
+        // Set info for tampered application detection (optional)
+        //safe.setPackageInfo(mockSign, defaultStore)
+
+        //or set a Global Observer to listen to data change events
+        safe.setObserver(object : DetectionObserver {
+            override fun onDetectionChanged(detections: Collection<Detection>) {
+                data(detections)
+            }
+        })
+    }
+
+    private fun data(detections: Collection<Detection>) {
+        progressBar.visibility = View.INVISIBLE
+        adapter.dataSet = detections.map { Data.fromDetection(it) }
+        emptyText.visibility = if (detections.isEmpty()) View.VISIBLE else View.INVISIBLE
     }
 
     private fun checkForLocationPermission() {
