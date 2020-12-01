@@ -52,11 +52,11 @@ class MainActivity : AppCompatActivity() {
         //safe.setPackageInfo(mockSign, defaultStore)
 
         //or set a Global Observer to listen to data change events
-        safe.setObserver(object : DetectionObserver {
+       /* safe.setObserver(object : DetectionObserver {
             override fun onDetectionChanged(detections: Collection<Detection>) {
                 data(detections)
             }
-        })
+        })*/
     }
 
     private fun data(detections: Collection<Detection>) {

@@ -11,12 +11,15 @@ interface SafeSdkInterface {
     var packageInfo: Flow<Pair<String, List<String>>>
     var detectTrigger: Flow<Boolean>
     var detectTriggerWithCallback: Flow<ResultsCallback>
+    var logging: Flow<Boolean>
 
     fun setObserver(value: DetectionObserver)
 
     fun setPackageInfo(originalSignature: String, stores: List<String>)
 
     fun detectAll(results: ResultsCallback = null)
+
+    fun logging(enable: Boolean)
 }
 
 typealias ResultsCallback = ((Collection<Detection>) -> Unit)?
