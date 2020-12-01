@@ -1,5 +1,5 @@
 # Android Safe SDK 
-[ ![Download](https://api.bintray.com/packages/appsafety/safesdk/safesdk/images/download.svg?version=0.4.0) ](https://bintray.com/appsafety/safesdk/safesdk/0.4.0/link)
+[ ![Download](https://api.bintray.com/packages/appsafety/safesdk/safesdk/images/download.svg?version=0.4.1) ](https://bintray.com/appsafety/safesdk/safesdk/0.4.1/link)
 
 An easy to use Android library for keeping away the suspicious fraud oriented activities. The SDK uses vital device sensors and information with minimal permission requirements in order to report any threat detection so the app developer can immediately determine the best next move!
 
