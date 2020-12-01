@@ -45,18 +45,20 @@ class MainActivity : AppCompatActivity() {
 
     private fun initSafeSdk() {
         safe = SafeSdkManager
-        //trigger once and wait for data
-        safe.detectAll(::data)
+        safe.logging(true)
 
         // Set info for tampered application detection (optional)
         //safe.setPackageInfo(mockSign, defaultStore)
 
+        //trigger once and wait for data
+        //safe.detectAll(::data)
+
         //or set a Global Observer to listen to data change events
-       /* safe.setObserver(object : DetectionObserver {
+        safe.setObserver(object : DetectionObserver {
             override fun onDetectionChanged(detections: Collection<Detection>) {
                 data(detections)
             }
-        })*/
+        })
     }
 
     private fun data(detections: Collection<Detection>) {
@@ -92,5 +94,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-
