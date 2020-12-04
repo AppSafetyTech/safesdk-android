@@ -10,6 +10,6 @@ Add the following dependency to your `build.gradle` file:
 
 ```
 dependencies {
-    implementation 'tech.appsafety.safesdk:{latest_version}'
+    implementation 'tech.appsafety:safesdk:{latest_version}'
 }
 ```
