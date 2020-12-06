@@ -34,15 +34,17 @@ Both ways are returning a collection of [Detections](https://github.com/AppSafet
 - `type`: The detection [Type](https://github.com/AppSafetyTech/safesdk-android/blob/main/safesdk/src/main/java/tech/appsafety/shared/Type.kt)
 - `confidence`: The level of confidence about the detection's status. If `0` then the detection has failed.
 # Detection Supported
-- [x] Root
-- [ ] Emulator *TODO*
-- [x] Mock Location
-- [x] VPN network
-- [ ] Virtual Container *TODO*
-- [ ] Display Mirroring *TODO*
-- [ ] Tampered Package *TODO*
-- [x] Multiple Users in Device
-- [x] Cloned app in Device
+|     Detection     	|  Supported  	|                    Description                    	|
+|:-----------------:	|:----------:	|:-------------------------------------------------:	|
+|        Root       	|     yes    	|      Administrator permissions (root access)      	|
+|      Emulator     	|    todo    	|                 Not a real device                 	|
+|        VPN        	|     yes    	|              Virtual Private Network              	|
+| Virtual Container 	|    todo    	|        Application is running in a sandbox        	|
+| Display Mirroring 	|    todo    	|        Display mirroring by another source        	|
+|   Mock Location   	|     yes    	| Another app is manipulating the device's location 	|
+|  Multiple  Users  	|     yes    	|   More than one user is registered in the device  	|
+|    Cloned  App    	|     yes    	|  The app has multiple instances in current device 	|
+|  Tampered Package 	|     yes    	|        Verify the integrity of the package        	|
 
 
 
