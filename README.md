@@ -42,7 +42,7 @@ Both ways are returning a collection of [Detections](https://github.com/AppSafet
 | Virtual Container 	|    todo    	|        Application is running in a sandbox        	|
 | Display Mirroring 	|    todo    	|        Display mirroring by another source        	|
 |   Mock Location   	|     yes    	| Another app is manipulating the device's location 	|
-|  Multiple  Users  	|     yes    	|   More than one user is registered in the device  	|
+|  Multiple  Users  	|     yes    	|   More than one user are registered in the device  	|
 |    Cloned  App    	|     yes    	|  The app has multiple instances in current device 	|
 |  Tampered Package 	|     yes    	|        Verify the integrity of the package        	|
 
