@@ -18,8 +18,7 @@ dependencies {
 ```kotlin
  SafeSdkManger.detectAll { detections -> {
                 // Collection of detections
-            }
-        }
+        }}
 })
 ```
 #### Subscribe for detection changes
@@ -31,9 +30,20 @@ dependencies {
 })
 ```
 Both ways are returning a collection of [Detections](https://github.com/AppSafetyTech/safesdk-android/blob/main/safesdk/src/main/java/tech/appsafety/shared/Detection.kt) that includes:
-1. `detected`: A `Boolean` value that represences the detection status.
-2. `type`: The detection [Type](https://github.com/AppSafetyTech/safesdk-android/blob/main/safesdk/src/main/java/tech/appsafety/shared/Type.kt)
-3. `confidence`: The level of confidence about the detection's status. If `0` then the detection has failed.
+- `detected`: A `Boolean` value that represences the detection status.
+- `type`: The detection [Type](https://github.com/AppSafetyTech/safesdk-android/blob/main/safesdk/src/main/java/tech/appsafety/shared/Type.kt)
+- `confidence`: The level of confidence about the detection's status. If `0` then the detection has failed.
+# Detection Supported
+- [x] Root
+- [ ] Emulator *TODO*
+- [x] Mock Location
+- [x] VPN network
+- [ ] Virtual Container *TODO*
+- [ ] Display Mirroring *TODO*
+- [ ] Tampered Package *TODO*
+- [x] Multiple Users in Device
+- [x] Cloned app in Device
+
 
 
 
