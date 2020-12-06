@@ -33,7 +33,8 @@ Both ways are returning a collection of [Detections](https://github.com/AppSafet
 - `detected`: A `Boolean` value that represences the detection status.
 - `type`: The detection [Type](https://github.com/AppSafetyTech/safesdk-android/blob/main/safesdk/src/main/java/tech/appsafety/shared/Type.kt)
 - `confidence`: The level of confidence about the detection's status. If `0` then the detection has failed.
-# Detection Supported
+# Features
+#### Detection supported
 |     Detection     	|  Supported  	|                    Description                    	|
 |:-----------------:	|:----------:	|:-------------------------------------------------:	|
 |        Root       	|     yes    	|      Administrator permissions (root access)      	|
@@ -46,6 +47,8 @@ Both ways are returning a collection of [Detections](https://github.com/AppSafet
 |    Cloned  App    	|     yes    	|  The app has multiple instances in current device 	|
 |  Tampered Package 	|     yes    	|        Verify the integrity of the package        	|
 
-
-
+# Issues
+We use [Github issues](https://github.com/AppSafetyTech/safesdk-android/issues) to track bugs and enhancements.
+- If you find a bug please fill out an issue report. Provide as much information as possible.
+- If you think of a great idea please fill out an issue as a proposal for your idea.
 
