@@ -46,6 +46,7 @@ Both ways are returning a collection of [Detections](https://github.com/AppSafet
 |  Multiple  Users  	|     yes    	|   More than one users are registered in the device	|
 |    Cloned  App    	|     yes    	|  The app has multiple instances in current device 	|
 |  Tampered Package 	|     yes    	|        Verify the integrity of the package        	|
+|   Bot Patterns      	|     todo    	|        Determine non-human display interactions      	|
 
 # Issues
 We use [Github issues](https://github.com/AppSafetyTech/safesdk-android/issues) to track bugs and enhancements.
