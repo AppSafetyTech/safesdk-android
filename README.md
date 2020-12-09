@@ -19,7 +19,6 @@ dependencies {
  SafeSdkManger.detectAll { detections -> {
                 // Collection of detections
         }}
-})
 ```
 #### Subscribe for detection changes
 ```kotlin
